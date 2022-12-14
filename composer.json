@@ -1,0 +1,18 @@
+{
+    "name": "nasirinezhad/azarmessage-api",
+    "description": "php library for sms panel",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Nasirinezhad\\AzarmessageApi\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nasirinezhad",
+            "email": "marsav98@gmail.com"
+        }
+    ],
+    "require": {}
+}
