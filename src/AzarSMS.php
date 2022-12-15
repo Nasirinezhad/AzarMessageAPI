@@ -7,21 +7,22 @@ class AzarSNS
     private $userid = '';
     private $password = '';
     private $action = 'smssend';
+    private $url = 'http://8.8.8.8/ws/sms.asmx?WSDL';
 
-    public function __construct($user, $password) {
+    public function __construct($user, $password, $url = null) {
         $this->userid = $user;
         $this->password = $password;
+        if($url) {
+            $this->url = $url;
+        }
     }
 
     public function send(Message $message)
     {
-        $client = new nusoap_client($url, 'wsdl');
-        $client->soap_defencoding = 'UTF-8';
-        $client->decode_utf8 = true;
         $this->action = $message->action;
-        $body = $message->body(); 
-        $response = $client->call('XmsRequest', ['requestData'=> $this->xms($body)]);
-        return new Response($response);
+        $body = $message->body();
+        $client = new Client($this->url, $this->xms($body));
+        return $client;
     }
 
 
