@@ -14,5 +14,7 @@
             "email": "marsav98@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "econea/nusoap": "^0.9.12"
+    }
 }
