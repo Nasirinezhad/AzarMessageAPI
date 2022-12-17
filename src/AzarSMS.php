@@ -17,9 +17,9 @@ class AzarSMS
         }
     }
 
-    public function send(Message $message)
+    public function sendSMS(Message $message)
     {
-        $this->action = $message->action;
+        $this->action = 'smssend';
         $body = $message->body();
         $client = new Client($this->url, $this->xms($body));
         return $client;

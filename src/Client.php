@@ -11,9 +11,10 @@ class Client
     
     public function __construct($url, $xml)
     {
-        $this->client = new nusoap_client($this->url, 'wsdl');
+        $this->client = new nusoap_client($url, 'wsdl');
         $this->client->soap_defencoding = 'UTF-8';
         $this->client->decode_utf8 = true;
+        var_dump($xml);
         $this->response = $this->client->call('XmsRequest', ['requestData'=> $xml]);
     }
 
