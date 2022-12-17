@@ -2,6 +2,8 @@
 
 namespace Nasirinezhad\AzarmessageApi;
 
+use nusoap_client;
+
 class Client
 {
     private $client = null;
@@ -20,6 +22,6 @@ class Client
         if($name == 'client'){
             return $this->client;
         }
-        return $response; //TODO: $response is a raw xml must be pars and return $name in $response
+        return $this->response; //TODO: $response is a raw xml must be pars and return $name in $response
     }
 }
