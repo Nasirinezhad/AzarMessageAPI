@@ -2,7 +2,7 @@
 
 namespace Nasirinezhad\AzarmessageApi;
 
-class AzarSNS
+class AzarSMS
 {
     private $userid = '';
     private $password = '';
