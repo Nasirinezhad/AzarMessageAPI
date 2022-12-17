@@ -16,5 +16,8 @@
     ],
     "require": {
         "econea/nusoap": "^0.9.12"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
     }
 }
