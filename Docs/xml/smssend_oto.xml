@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xmsrequest>
+    <userid>5051</userid>
+    <password>*******</password>
+    <action>smssend</action>
+    <body>
+      <type>oto</type>
+      <recipient doerid="myid1" mobile="0912614****">MessageBody</recipient>
+      <recipient doerid="myid2" mobile="0912613****">MessageBody</recipient>
+    </body>
+  </xmsrequest>
+  <xmsresponse>
+    <userid>5051</userid>
+    <action>smssend</action>
+    <code id="0">ok</code>
+    <body>
+      <recipient doerid="myid1" mobile="912614****" ml="3" status="46">0</recipient><!-- Error for this number(Not smsId result) -->
+      <recipient doerid="myid2" mobile="912613****" ml="3" status="40">12365454</recipient>
+    </body>
+  </xmsresponse>
+</root>
