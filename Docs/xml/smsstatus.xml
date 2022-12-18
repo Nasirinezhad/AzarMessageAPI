@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xmsrequest>
+    <userid>7342</userid>
+    <password>********</password>
+    <action>smsstatus</action>
+    <body>
+      <message>######</message>
+      <message>$$$$$$</message>
+    </body>
+  </xmsrequest>
+  <xmsresponse>
+    <userid>7342</userid>
+    <action>smsstatus</action>
+    <code id="0">ok</code>
+    <body>
+      <message id="######" status="41" messagelength="2" recipientcount="1" sentcount="1" startdate="2013-06-08T12:04:05.267"/>
+      <message id="$$$$$$" status="41" messagelength="2" recipientcount="1" sentcount="1" startdate="2013-06-08T12:04:05.267"/>
+    </body>
+  </xmsresponse>
+</root>

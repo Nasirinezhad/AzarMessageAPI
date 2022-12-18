@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xmsrequest>
+    <userid>5051</userid>
+    <password>*******</password>
+    <action>smssend</action>
+    <body>
+      <type>otm</type>
+      <message originator="50002" doerid="myid1">MessageBody</message>
+      <sendmodel interval="5" count="1"></sendmodel>
+      <senddate>
+        <allowtime>7-23</allowtime>
+      </senddate>
+      <recipient>912614****</recipient>
+      <recipient>
+        <r id="zone">
+          <n>1000026</n>  <!-- تفکیک جنسیت، اردبیل -->
+          <sr>100</sr>    <!-- از این ردیف شروع به ارسال شود -->
+          <c>1</c>        <!-- به این تعداد -->
+          <p>9121</p>     <!-- به این پیش شماره -->
+          <!-- از این قسمت به بعد فقط برای تفکیک جنسیت کاربرد دارد -->
+          <sa>20</sa>     <!-- از این سن -->
+          <ea>50</ea>     <!-- تا این سن -->
+          <g>1</g>        <!-- فقط آقایون -->
+          <t>2</t>        <!-- نوع شماره(اعتباری/دائمی) هردو -->
+        </r>
+      </recipient>
+      <recipient>
+        <r id="zone">
+          <n>2000006</n>  <!-- همراه اول تقسیمات کشوری فقط دائمی، بوشهر -->
+          <sr>1000</sr>   <!-- از این ردیف شروع به ارسال شود -->
+          <c>50000</c>    <!-- به این تعداد -->
+        </r>
+      </recipient>
+    </body>
+  </xmsrequest>
+  <xmsresponse>
+    <userid>5051</userid>
+    <action>smssend</action>
+    <code id="0">ok</code>
+    <body>
+      <message doerid="myid1" rc="50002" ml="1">12365488</message> <!-- myid bigint -->
+    </body>
+  </xmsresponse>
+</root>

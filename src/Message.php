@@ -34,7 +34,7 @@ class Message
             $this->messages[count($this->receivers[])-1] = $message;
         }
     }
-    public function newRecipient($zoneID, $total = null)
+    public function newRecipient($zoneID, $total = 0)
     {
         return $this->receivers[] = new Recipient($zoneID, $total);
     }
