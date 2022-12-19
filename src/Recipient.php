@@ -13,50 +13,62 @@ class Recipient
     public function zoneID(Int $zoneID)
     {
         $this->n = $zoneID;
+        return $this;
     }
     public function offset(Int $offset)
     {
         $this->sr = $offset;
+        return $this;
     }
     public function total(Int $total)
     {
         $this->c = $total;
+        return $this;
     }
     public function prefix(Int $prefix)
     {
         $this->p = $prefix;
+        return $this;
     }
     public function minimumAge($age)
     {
         $this->sa = $age;
+        return $this;
     }
     public function maxmumAge($age)
     {
         $this->ea = $age;
+        return $this;
     }
     public function onlyMen()
     {
         $this->g = 1;
+        return $this;
     }
     public function onlyWomen()
     {
         $this->g = 0;
+        return $this;
     }
     public function MenAndWomen()
     {
         $this->g = 2;
+        return $this;
     }
     public function permanentOnly()
     {
         $this->t = 0;
+        return $this;
     }
     public function prepaidOnly()
     {
         $this->t = 1;
+        return $this;
     }
     public function all()
     {
         $this->t = 2;
+        return $this;
     }
     public function xml()
     {
