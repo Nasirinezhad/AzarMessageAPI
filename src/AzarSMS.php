@@ -25,6 +25,15 @@ class AzarSMS
         return $client;
     }
 
+    public function bankNumber($id = 0)
+    {
+        $this->action = 'treenodes';
+        $body = $this->xms('<node id="'.$id.'" />');
+        $client = new Client($this->url, $body);
+        return $client;
+
+    }
+
 
     private function xms($body)
     {
